@@ -9,7 +9,7 @@ device_id = "7CDFA11A3024"
 
 @app.route('/')
 def index():
-    return jsonify({'message': 'Welcome to the IoT API'})
+    return jsonify({'message': 'Welcome to the IoT HUB sample API'})
 
 @app.route('/up')
 def up():
