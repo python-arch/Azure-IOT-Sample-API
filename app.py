@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 #connection string for sending C2D messages
 connection_str = "HostName=rd-iothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=TcpaortpcdjcMkZDre1kVhBMdkAZVUXYPAIoTPaN/kQ="
-device_id = "10521C663374"
+device_id = "7CDFA155E716"
 
 @app.route('/')
 def index():
