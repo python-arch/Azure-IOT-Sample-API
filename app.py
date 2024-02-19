@@ -52,13 +52,13 @@ latest_display_value = 0
 
 @app.route('/get_display_value')
 def get_display_value():
-    return jsonify({'display_value': latest_display_value})
+    return jsonify({"display_value":latest_display_value.body_as_str()})
 
 
 async def on_event(partition_context, event):
     global latest_display_value
     logger.info("Received event from partition {}".format(partition_context.partition_id))
-    latest_display_value = event.body_as_str()
+    latest_display_value = event
     print(latest_display_value)
     await partition_context.update_checkpoint(event)
 
